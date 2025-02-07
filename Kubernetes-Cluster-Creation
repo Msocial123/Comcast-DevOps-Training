@@ -26,6 +26,11 @@ sudo ./aws/install
    25  kubectl get nodes
    26  aws eks update-kubeconfig –-name test-cluster –region ap-southeast-1
    27  aws eks update-kubeconfig --name test-cluster --region ap-southeast-1
+
+   Delete the Cluster :
+
+   eksctl delete cluster --name <cluster-name> --region <aws-region>
+   
    28  history
 
 
