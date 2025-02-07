@@ -1,0 +1,11 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: oracle-web-app 
+  namespace: test-ns
+spec:
+  containers:
+    - name: oracle-web 
+      image: muralisocial123/oracle-web-app:latest
+      ports:
+        - containerPort: 80
