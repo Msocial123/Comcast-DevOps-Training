@@ -1,0 +1,24 @@
+   62  kubectl get ns
+   63  kubectl run --name example-app --image nginx --ports 80
+   64  kubectl run --name example-app --image nginx --port 80
+   65  kubectl run example-app --image nginx --port 80
+   66  clear
+   67  kubectl get pods
+   68  kubectl describe pod example-app
+   69  kubectl get pods -n test-ns
+   70  clear
+   71  kubectl run example-app --image nginx --port 80 -n test-ns
+   72  kubectl run example-app --image nginx --port 80
+   73  kubectl get pods -n test-ns
+   74  git pull
+   75  ls
+   76  kubectl apply -f pod.yaml
+   77  kubectl get pods
+   78  kubectl get pods -n test-ns
+   79  kubectl get oracle-web-app
+   80  kubectl get oracle-web-app -n test-ns
+   81  kubectl describe pod  oracle-web-app -n test-ns
+   82  kubectl get pods -o wide -n test-ns
+   83  kubectl get nodes -o wide
+   84  clear
+   85  history
