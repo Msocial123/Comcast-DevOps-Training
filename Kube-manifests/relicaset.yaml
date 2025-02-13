@@ -1,0 +1,27 @@
+apiVersion: apps/v1 
+kind: ReplicaSet 
+metadata:
+  name: Oracle-app-rs 
+spec: # It is going to define the behaviour of the replicaset
+  replicas: 5
+  selector:
+  template:
+    metadata:
+      labels:
+        app: oracle 
+    spec: # It is going to define the behaviour of the pod 
+      containers:
+        - name: oracle-app 
+          image: muralisocial123/oracle-web:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi 
+            limits: 
+              cpu: 200m
+              memory: 256Mi    
+
+            
+  
