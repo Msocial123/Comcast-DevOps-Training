@@ -14,7 +14,7 @@ spec: # It is going to define the behaviour of the replicaset
     spec: # It is going to define the behaviour of the pod 
       containers:
         - name: oracle-app 
-          image: muralisocial123/oracle-web-app:latest
+          image: muralisocial123/oracle-web-app:1.0
           ports:
             - containerPort: 80
           resources:
