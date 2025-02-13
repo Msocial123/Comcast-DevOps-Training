@@ -15,7 +15,7 @@ spec:
         app: wipro 
     spec:
       containers:
-        - image: muralisocial123/wipro-web-app:latest
+        - image: muralisocial123/transcation-bank-app:latest
           name: wipro-app 
           ports:
             - containerPort: 80 
