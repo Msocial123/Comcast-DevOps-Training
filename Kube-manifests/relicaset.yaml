@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: ReplicaSet 
 metadata:
-  name: oracle-app-rs-1
+  name: wipro-app-rs
 spec: # It is going to define the behaviour of the replicaset
   replicas: 5
   selector:
@@ -14,7 +14,7 @@ spec: # It is going to define the behaviour of the replicaset
     spec: # It is going to define the behaviour of the pod 
       containers:
         - name: oracle-app 
-          image: nginx:latest
+          image: docker.io/muralisocial123/wipro-web-app:latest
           ports:
             - containerPort: 80
           resources:
