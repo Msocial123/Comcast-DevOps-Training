@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: ReplicaSet 
 metadata:
-  name: Oracle-app-rs 
+  name: oracle-app-rs 
 spec: # It is going to define the behaviour of the replicaset
   replicas: 5
   selector:
