@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata:
-  name: Wipro-app-deployment
+  name: wipro-app-deployment
   labels:
     app: web
 spec:
