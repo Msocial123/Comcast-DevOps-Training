@@ -9,7 +9,7 @@ spec:
   - name: wipro-app-deployment
     protocol: TCP 
     port: 83
-    targetPort: 80
+    targetPort: 3000
   - name: wipro-app-deployment1
     protocol: TCP 
     port: 82 
