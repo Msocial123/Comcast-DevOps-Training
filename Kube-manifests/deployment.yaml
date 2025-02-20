@@ -18,7 +18,7 @@ spec:
         - image: muralisocial123/transcation-bank-app:latest
           name: wipro-app 
           ports:
-            - containerPort: 80 
+            - containerPort: 3000 
           resources:
             requests:
               cpu: 100m
