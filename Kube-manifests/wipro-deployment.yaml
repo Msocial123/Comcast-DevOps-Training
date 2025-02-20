@@ -5,11 +5,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: example
+      app: web
   template:
     metadata:
       labels:
-        app: example
+        app: web
     spec:
       containers:
       - name: app-web
