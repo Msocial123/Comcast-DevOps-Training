@@ -1,0 +1,16 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name: wipro-example-svc
+spec:
+  selector:
+    app: example
+  ports:
+  - name: wipro-app-deployment
+    protocol: TCP 
+    port: 82
+    targetPort: 80
+  - name: wipro-app-deployment1
+    protocol: TCP 
+    port: 83 
+    targetPort: 80  
