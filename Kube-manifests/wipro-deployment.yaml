@@ -13,10 +13,10 @@ spec:
     spec:
       containers:
       - name: app-web
-        image: muralisocial123/transcation-bank-app:latest
+        image: muralisocial123/fss-web-app:latest
         resources:
           limits:
             memory: "128Mi"
             cpu: "100m"
         ports:
-        - containerPort: 3000
+        - containerPort: 80
