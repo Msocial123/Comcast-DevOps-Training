@@ -11,22 +11,22 @@ spec:
   rules:
   - http:
       paths:
-      - pathType: Prefix
-        path: "/bank(/|$)(.*)"
+      - path: /bank(/|$)(.*)
+        pathType: Prefix
         backend:
           service:
             name: transcation-svc 
             port: 
               number: 3002
-      - pathType: Prefix
-        path: "/oracle(/|$)(.*)"
+      - path: /oracle(/|$)(.*)
+        pathType: Prefix
         backend:
           service:
             name: wipro-example-svc1 
             port: 
               number: 84   
-      - pathType: Prefix
-        path: /(.*)"
+      - path: /(.*)
+        pathType: Prefix
         backend:
           service:
             name: wipro-example-svc1 
