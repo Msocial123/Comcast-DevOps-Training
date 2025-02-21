@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/bank(/|$)(.*)"
+        backend:
+          service:
+            name: transcation-svc 
+            port: 
+              number: 3002
+      - pathType: Prefix
+        path: "/oracle(/|$)(.*)"
+        backend:
+          service:
+            name: wipro-example-svc1 
+            port: 
+              number: 84   
+      - pathType: Prefix
+        path: /(.*)"
+        backend:
+          service:
+            name: wipro-example-svc1 
+            port: 
+              number: 84              
