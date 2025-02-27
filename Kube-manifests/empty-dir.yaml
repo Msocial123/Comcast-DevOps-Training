@@ -1,0 +1,23 @@
+apiVersion: v1 
+kind: Deployment 
+metadata:
+  name: example-empty-volume
+spec: 
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx 
+  template: 
+    metadata:
+      labels:
+        app: nginx 
+    spec: 
+      containers:
+        - name: nginx 
+          image: nginx:latest 
+          volumeMounts:
+            - name: example-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: example-volume 
+          emptyDir: {}            

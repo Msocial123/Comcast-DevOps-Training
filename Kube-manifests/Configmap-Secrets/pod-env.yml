@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-example
+  labels:
+    app: web
+spec:
+  containers:
+  - name: web-app
+    image: nginx
+    ports:
+      - containerPort: 80
+    env:
+      - name: Training 
+        value: docker 
+      - name: DB_HOST
+        value: db.admin.com    

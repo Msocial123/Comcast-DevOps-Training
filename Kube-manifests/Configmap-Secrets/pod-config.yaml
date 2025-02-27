@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-example-2
+  labels:
+    app: web
+spec:
+  containers:
+  - name: web-app
+    image: nginx
+    ports:
+      - containerPort: 80
+    env:
+      - name: course
+        valueFrom:
+          configMapKeyRef:
+            key: course
+            name: app-config
+      - name: duration
+        valueFrom:
+          configMapKeyRef:
+            key: duration
+            name: app-config  
