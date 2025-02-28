@@ -3,7 +3,7 @@ kind: StorageClass
 metadata: 
   name: ebs-sc 
 provisioner: ebs.csi.aws.com 
-reclaimPolicy: Reatin 
+reclaimPolicy: Retain 
 volumeBindingMode: WaitForFirstConsumer
 parameters:
   type: gp2 
@@ -14,11 +14,11 @@ metadata:
   name: my-ebs-dynamic-pvc 
 spec: 
   storageClassName: ebs-sc
-accessModes:
-  - ReadWriteOnce
-resources: 
-  requests:
-    storage: 12Gi 
+  accessModes:
+    - ReadWriteOnce
+  resources: 
+    requests:
+      storage: 12Gi 
 --- 
 apiVersion: v1 
 kind: Pod 
