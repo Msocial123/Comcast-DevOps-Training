@@ -1,0 +1,58 @@
+1  yum install docker -y
+    2  service docker start
+    3  service docker status
+    4  clear
+    5  chkconfig docker on
+    6  clear
+    7  docker --version
+    8  docker ps
+    9  docker run -it --name A1 -v /Murali ubuntu /bin/bash
+   10  docker volume ls
+   11  cd /var/lib
+   12  ls
+   13  cd docker
+   14  ls
+   15  cd volumes
+   16  ls
+   17  cd 03e0e4d7d08457f826d67522f50854ec2dd72e8fa95a3a22f632e4a0b33c8ed3
+   18  ls
+   19  ls
+   20  cd _data
+   21  ls
+   22  docker ps -a
+   23  docker rm A1
+   24  ls
+   25  docker run -it --name A1 -v /Murali ubuntu /bin/bash
+   26  cd ..
+   27  cd ..
+   28  ls
+   29  docker ps
+   30  docker start A1
+   31  docker inspect A1
+   32  ls
+   33  cd 831560d61d12e0d4cc5077ae34f7a15c4a252b81836237277becb3d0b0a2094f
+   34  ls
+   35  cd _data
+   36  ls
+   37  cd /home/ec2-user
+   38  clear
+   39  docker run -it --name A1 -v mydata:/Murali ubuntu /bin/bash
+   40  docker run -it --name A2 -v mydata:/Murali ubuntu /bin/bash
+   41  docker volume ls
+   42  docker inspect mydata
+   43  cd /var/lib/docker/volumes/mydata/_data
+   44  ls
+   45  docker inspect A2
+   46  cd /home/ec2-user
+   47  ls
+   48  cleaer
+   49  clear
+   50  mkdir project
+   51  cd project/
+   52  pwd
+   53  cd ..
+   54  docker run -it --name B1 -v /home/ec2-user/project:/Mohan ubuntu /bin/bash
+   55  docker volume ls
+   56  cd po
+   57  ls
+   58  cd project
